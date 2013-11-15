@@ -48,4 +48,9 @@
   return [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(self) inManagedObjectContext:managedObjectContext];
 }
 
++ (void)nb_deleteObject:(NBContextType)contextType and:(NSManagedObject*)object{
+    NSManagedObjectContext *context = [NSManagedObjectContext nb_contextForType:contextType];
+    [context deleteObject:[context objectWithID:object.objectID]];
+}
+
 @end
