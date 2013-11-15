@@ -27,7 +27,7 @@
 @interface NSManagedObject (Creation)
 
 + (instancetype)nb_createInContextOfType:(NBContextType)contextType;
-
++ (void)nb_deleteObject:(NBContextType)contextType and:(NSManagedObject*)object;
 + (instancetype)nb_createInContextOfType:(NBContextType)contextType initializingValuesWithDictionary:(NSDictionary *)dictionary;
 
 @end
